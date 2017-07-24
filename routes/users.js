@@ -14,6 +14,10 @@ router.post('/', function(req, res, next) {
   if(Validator.isEmpty(req.body.email)){
     errors.email = 'Email is required';
   }
+  if(Validator.isEmpty(req.body.password)){
+    errors.password = 'Password is required';
+  }
+
   function validateInput(data){
     return {
       errors, 
